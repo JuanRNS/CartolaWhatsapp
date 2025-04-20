@@ -1,0 +1,11 @@
+# Ignorar pastas de sessão
+whatsapp-session/
+node_modules/
+
+# Ignorar arquivos e configs
+.env
+*.log
+.vscode/
+.idea/
+dist/
+build/

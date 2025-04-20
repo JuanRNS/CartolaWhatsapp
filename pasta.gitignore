@@ -1,8 +1,0 @@
-*.log
-whatsapp-session/
-.vscode/
-.idea/
-/dist/
-/build/
-node_modules/
-.env
