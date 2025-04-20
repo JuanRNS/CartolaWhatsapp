@@ -32,10 +32,10 @@ async function iniciarWhatsapp() {
 
 async function enviarMensagemGrupo(mensagem: string) {
     // localizar grupo
-    await page.waitForSelector('span[title="' + nomeGrupo + '"]');
+    await page.waitForSelector('span[title="' + nomeGrupo + '"]', { visible: true });
     await page.click('span[title="' + nomeGrupo + '"]');
     // Selecionando campo de mensagem
-    await page.waitForSelector('div[tabindex="10"]');
+    await page.waitForSelector('div[tabindex="10"]', { visible: true });
     await page.click('div[tabindex="10"');
     // Escrevendo mensagem
     await page.keyboard.type(mensagem);
