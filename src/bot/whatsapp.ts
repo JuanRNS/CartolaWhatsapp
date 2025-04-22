@@ -29,14 +29,14 @@ export async function iniciarWhatsapp() {
 }
 
 export async function enviarMensagemGrupo(mensagem: string) {
-  await page.waitForSelector(`span[title="${nomeGrupo}"]`, { visible: true, timeout: 10 * 60 * 1000 });
-  await page.click(`span[title="${nomeGrupo}"]`);
+  await page.waitForSelector('div[contenteditable="true"][data-tab="3"]', { visible: true, timeout: 10 * 60 * 1000 });
+  await page.click('div[contenteditable="true"][data-tab="3"]');
+  await page.keyboard.type(nomeGrupo, { delay: 100 });
+  await page.keyboard.press("Enter", { delay: 100 });
+  
 
   await page.waitForSelector('div[tabindex="10"]', { visible: true });
   await page.click('div[tabindex="10"]');
-  await page.evaluate((msg) => {
-    const input = document.querySelector('div[tabindex="10"]') as HTMLElement;
-    input.innerHTML = msg;
-  }, mensagem);
-  await page.keyboard.press("Enter");
+  await page.keyboard.type(mensagem , { delay: 100 }  );// Aguarda 1 segundo antes de enviar a mensagem
+  await page.keyboard.press("Enter" );
 }
