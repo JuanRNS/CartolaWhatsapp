@@ -85,9 +85,7 @@ Sugestões de melhorias
 - Histórico de avisos enviados para evitar duplicações após reinício.
 - UI simples para configurar horários e mensagens via web.
 
-Contribuições
 Contribuições são bem-vindas. Abra issues para bugs ou melhorias e envie pull requests.
 
-Contato
 Criado por @JuanRNS — ajuste o README conforme preferir.
 ```
