@@ -8,3 +8,12 @@ export interface CartolaMercado {
         timestamp: number;
       };
 }
+
+export interface CartolaTimes{
+  time:{
+    nome_cartola: string;
+    nome: string;
+  }
+  pontos_campeonato: number;
+  pontos: number;
+}

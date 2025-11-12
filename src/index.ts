@@ -1,11 +1,14 @@
 import { iniciarWhatsapp } from "./bot/whatsapp";
-import { getDadosCartolaMercadoAbertoFechado } from "./services/cartolaService";
+import { getDadosCartolaMercadoAbertoFechado, getDadosTimesCartola } from "./services/cartolaService";
 
-(async () => {
+try{
   await iniciarWhatsapp();
   await getDadosCartolaMercadoAbertoFechado();
+  await getDadosTimesCartola();
 
   setInterval(() => {
     getDadosCartolaMercadoAbertoFechado();
   }, 60 * 1000);
-})();
+}catch(error){
+  console.error("Erro ao iniciar o bot:", error);
+}
