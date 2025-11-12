@@ -1,2 +1,2 @@
 # CartolaWhatsapp
-Usando typescript para enviar mensagens via whatsapp
+Um script que envia mensagens em grupo do cartola, falando sobre o status do mercado
